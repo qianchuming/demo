@@ -1,11 +1,11 @@
-def move(players, step):
+def move(players, step):                                  #第一个函数
     num = step - 1
     while num > 0:
         tmp = players.pop(0)
         players.append(tmp)
         num = num - 1
     return players
-def play(players,step,alive):
+def play(players,step,alive):                             #第二个函数
     player_list = [i for i in range(1,players+1)]
     while len(player_list)>alive: 
         player_list = move(player_list,step)
